@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.asif.idiot.TimeActivity"
+    android:background="#FFFFFF">
+
+    <EditText
+        android:id="@+id/add_reminder_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="65dp"
+        android:ems="10"
+        android:hint="@string/remind_about"
+        android:inputType="textMultiLine"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/background_dark"
+        />
+
+    <EditText
+        android:id="@+id/set_time_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/add_reminder_msg"
+        android:layout_marginTop="46dp"
+        android:onClick="add_time"
+        android:text="@string/set_time"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/set_date_button"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/set_time_button"
+        android:layout_alignBottom="@+id/set_time_button"
+        android:layout_alignParentStart="true"
+        android:text="@string/set_date"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:onClick="add_date"/>
+
+
+    <Button
+        android:id="@+id/save_time"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignEnd="@+id/set_date_button"
+        android:layout_below="@+id/spinner_repeat"
+        android:layout_marginTop="44dp"
+        android:onClick="save_time"
+        android:text="@string/save"
+        android:textColor="#448AFF" />
+
+
+    <Spinner
+        android:id="@+id/spinner_repeat"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="19dp" />
+
+    <Spinner
+        android:id="@+id/spinner_type"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/spinner_repeat"
+        android:layout_marginStart="19dp" />
+
+</RelativeLayout>
